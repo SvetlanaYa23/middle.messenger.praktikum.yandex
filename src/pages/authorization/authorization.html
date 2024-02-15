@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+</head>
+<body>
+    <section class="authorization-form">
+      <div class="authorization-form__container">
+        <form class="authorization-form__form" action="" method="post">
+            <h2 class="authorization-form__title">Вход</h2>
+            <div class="authorization-form__inputs">
+                {{>form-field/form-field name="login" value="Логин" type="text" placeholder="ivanivanov"}}
+                {{>form-field/form-field name="password" value="Пароль" type="password" placeholder="**********"}}
+            </div>
+            <div class="authorization-form__button">
+              {{>button/button value="Авторизоваться"}}
+            </div>
+            <div class="authorization-form__link">
+              {{>link/link linkHref="/" linkText="Нет аккаунта?"}}
+            </div>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="./authorization.ts"></script>
+</body>
+</html>

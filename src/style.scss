@@ -1,0 +1,12 @@
+@import "../node_modules/normalize-scss/sass/normalize";
+
+@import './components/error-page/error-page.scss';
+@import './components/button/button.scss';
+@import './components/link/link.scss';
+@import './components/form-field/form-field.scss';
+@import './components/profile-field/profile-field.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}

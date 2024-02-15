@@ -1,0 +1,28 @@
+@import '../../colors.scss';
+
+.field {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid $lightGrey;
+   padding: 8px 0;
+
+   &:last-child {
+        border: 0;
+   }
+
+   &__name {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: $blackGrey;
+    }
+
+   &__value {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: $grey;
+    }
+}
