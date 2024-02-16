@@ -12,7 +12,7 @@ Messenger - проектная работа для 1 спринта
 - `npm run build`,
 - `npm run start` — run build and start server,
 
-# Netlify
+### Netlify
     index: https://deploy--zesty-heliotrope-fcb30b.netlify.app/
     authorization: https://deploy--zesty-heliotrope-fcb30b.netlify.app/pages/authorization/authorization
     registration: https://deploy--zesty-heliotrope-fcb30b.netlify.app/pages/registration/registration
