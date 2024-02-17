@@ -1,16 +1,16 @@
 @import '../../colors.scss';
 
-.field {
-   display: flex;
-   justify-content: space-between;
-   border-bottom: 1px solid $lightGrey;
-   padding: 8px 0;
+.field-edit{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $lightGrey;
+  padding: 8px 0;
 
-   &:last-child {
+  &:last-child {
         border: 0;
-   }
+  }
 
-   &__name {
+  &__name {
         font-family: 'Times New Roman', Times, serif;
         font-weight: 500;
         font-size: 13px;
@@ -18,11 +18,18 @@
         color: $blackGrey;
     }
 
-   &__value {
+  &__value {
         font-family: 'Times New Roman', Times, serif;
         font-weight: 500;
         font-size: 13px;
         line-height: 13px;
+        text-align: end;
         color: $grey;
+        border: 0;
+
+        &:focus {
+          border: 0;
+          outline: none;
+        }
     }
 }

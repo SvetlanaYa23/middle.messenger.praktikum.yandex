@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
 </head>
 <body>
-    <section class="profile">
+    <main class="profile">
         <div class="profile__container">
             <div class="profile__user">
-                <img class="profile__image" src="../../../static/image.png" alt="avatar">
+                    {{>avatar/avatar name="avatar"}}
                 <div class="profile__user-name">Иван</div>
             </div>
             <div class="profile__info">
@@ -21,12 +21,12 @@
                 {{>profile-field/profile-field fieldName ="Телефон" fieldValue="+7 (909) 967 30 30"}}
             </div>
             <div class="profile__links">
-                {{>link/link linkHref="#" linkText="Изменить данные"}}
-                {{>link/link linkHref="#" linkText="Изменить пароль"}}
-                {{>link/link linkHref="#" linkText="Выйти"}}
+                {{>link/link linkHref="/pages/profile-edit/profile-edit.html" linkText="Изменить данные"}}
+                {{>link/link linkHref="/pages/password-edit/password-edit.html" linkText="Изменить пароль"}}
+                {{>link/link linkHref="/" linkText="Выйти"}}
             </div>
         </div>
-    </section>
+    </main>
     <script type="module" src="./profile.ts"></script>
 </body>
 </html>

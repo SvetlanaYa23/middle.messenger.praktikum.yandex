@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
 </head>
 <body>
-  <section class="registration-form">
+  <main class="registration-form">
     <div class="registration-form__container">
       <form class="registration-form__form" action="" method="post">
           <h2 class="registration-form__title">Регистрация</h2>
           <div class="registration-form__inputs">
-              {{>form-field/form-field name="email" value="Почта" type="text" placeholder="pochta@yandex.ru"}}
-              {{>form-field/form-field name="login" value="Логин" type="text" placeholder="ivanivanov"}}
-              {{>form-field/form-field name="first_name" value="Имя" type="text" placeholder="Иван"}}
-              {{>form-field/form-field name="second_name" value="Фамилия" type="text" placeholder="Иванов"}}
-              {{>form-field/form-field name="phone" value="Телефон" type="tel" placeholder="+ 7 (999) 999 99 99"}}
-              {{>form-field/form-field name="password" value="Пароль" type="password" placeholder="**********"}}
-              {{>form-field/form-field name="password" value="Пароль (ещё раз)" type="password" placeholder="**********"}}
+              {{>form-field/form-field type="email" name="email" id="registration-email" value="Почта" placeholder="pochta@yandex.ru"}}
+              {{>form-field/form-field type="text" name="login" id="registration-login" value="Логин" placeholder="ivanivanov"}}
+              {{>form-field/form-field type="text" name="first_name" id="registration-first-name" value="Имя" placeholder="Иван"}}
+              {{>form-field/form-field type="text" name="second_name" id="registration-second-name" value="Фамилия" placeholder="Иванов"}}
+              {{>form-field/form-field type="tel" name="phone" id="registration-phone" value="Телефон" placeholder="+ 7 (999) 999 99 99"}}
+              {{>form-field/form-field type="password"  name="password" id="registration-password" value="Пароль" placeholder="**********"}}
+              {{>form-field/form-field type="password" name="password" id="registration-password-again" value="Пароль (ещё раз)" placeholder="**********"}}
           </div>
           <div class="registration-form__button">
             {{>button/button value="Зарегистрироваться"}}
@@ -27,7 +27,7 @@
           </div>
       </form>
     </div>
-  </section>
+  </main>
   <script type="module" src="./registration.ts"></script>
 </body>
 </html>

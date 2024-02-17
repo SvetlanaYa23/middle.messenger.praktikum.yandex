@@ -1,0 +1,61 @@
+@import '../../colors.scss';
+
+.avatar {
+    &__image-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 130px;
+        height: 130px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: $backgroundGrey;
+
+        &:hover {
+            background-color: $black;
+            opacity: 0.5;
+            cursor: pointer;
+    
+            .avatar__change-avatar {
+                display: block;
+            }
+
+            .avatar__image {
+                display: none;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    &__change-avatar {
+        display: none;
+
+        & label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 130px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 14px;
+            color: $white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        & input {
+            display: none;
+        }
+    }
+}

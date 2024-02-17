@@ -13,6 +13,8 @@ export default defineConfig({
                 registration: '/pages/registration/registration.html',
                 chat: '/pages/chat/chat.html',
                 profile: '/pages/profile/profile.html',
+                profileEdit: '/pages/profile-edit/profile-edit.html',
+                passwordEdit: '/pages/password-edit/password-edit.html',
                 page404: '/pages/404-page/404-page.html',
                 page500: '/pages/500-page/500-page.html',
             }
