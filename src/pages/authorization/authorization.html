@@ -11,8 +11,8 @@
         <form class="authorization-form__form" action="" method="post">
             <h2 class="authorization-form__title">Вход</h2>
             <div class="authorization-form__inputs">
-                {{>form-field/form-field name="login" value="Логин" type="text" placeholder="ivanivanov"}}
-                {{>form-field/form-field name="password" value="Пароль" type="password" placeholder="**********"}}
+                {{>form-field/form-field name="login" value="Логин" id="authorization-login" type="text" placeholder="ivanivanov"}}
+                {{>form-field/form-field name="password" value="Пароль" id="authorization-password" type="password" placeholder="**********"}}
             </div>
             <div class="authorization-form__button">
               {{>button/button value="Авторизоваться"}}
