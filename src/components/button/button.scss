@@ -1,0 +1,23 @@
+@import '../../colors.scss';
+
+.button {
+    height: 100%;
+    width: 100%;
+    min-height: 37px;
+    max-width: 280px;
+    background-color: $blue;
+    color: $white;
+    border-radius: 8px;
+    border-color: $blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    align-items: center;
+    cursor: pointer;
+
+    &:focus {
+        border-color: $blue;
+        cursor: pointer;
+    }
+}

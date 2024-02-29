@@ -1,0 +1,47 @@
+@import '../../colors.scss';
+
+.profile-edit {
+    width: 100%;
+    height: 100%;
+    @media (min-width: 960px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    &__container {
+        padding: 20px;
+        @media (min-width: 960px) {
+            min-width: 510px;
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__user-name {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: $blackGrey;
+    }
+
+    &__info {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+}
