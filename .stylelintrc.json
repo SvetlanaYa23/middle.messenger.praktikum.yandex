@@ -3,7 +3,8 @@
   "plugins": ["stylelint-scss"],
   "rules": {
     "scss/dollar-variable-empty-line-before": null,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "media-feature-range-notation": null
   },
   "ignoreFiles": [
     "dist/*"
