@@ -7,7 +7,47 @@
 </head>
 <body>
     <main class="chat">
-        <div>В процессе разработки</div>
+        <div class="chat__container">
+            <div class="chat__left-part">
+                <div class="chats__header">
+                    <a class="chats__profile-link" href="/profile" target="_blank">Profile</a>
+                </div>
+                <div class="chats__items">
+                    <div class="chats__item">
+                        <div class="chats__info_left">
+                            <div class="chats__user-image">
+                                <img src="../../../static/image.png" alt="user image">
+                            </div>
+                            <div class="chats__container">
+                                <div class="chats__user-name">Антон</div>
+                                <div class="chats__user-messenge">Привет!</div>
+                            </div>
+                        </div>
+                        <div class="chats__info_right">
+                            <div class="chats__time">10:20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__right-part">
+                <div class="message__profile-info">
+                    <div class="message__user-image">
+                        <img src="../../../static/image.png" alt="user image">
+                    </div>
+                    <div class="message__user-name">Антон</div>
+                </div>
+                <!-- <div class="message__item">
+                    <div class="message__data">
+                    </div>
+                    <div class="message__text">
+                    </div>
+                </div> -->
+                <div class="message__send">
+                    <input class="message__input" type="text" name="message" id="message" placeholder="Сообщение">
+                    <button class="message__send-button"></button>
+                </div>
+            </div>
+        </div>
     </main>
     <script type="module" src="./chat.ts"></script>
 </body>
