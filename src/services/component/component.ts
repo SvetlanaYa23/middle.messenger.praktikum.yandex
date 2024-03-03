@@ -99,7 +99,7 @@ private _componentDidUpdate = (event: Event): void => {
 
   private _makePropsProxy(props: Props): Props {
     return new Proxy(props, {
-      set: (target: Props, prop: string, value: unknown): boolean => {
+      set: (target: Props, prop: string, value: string): boolean => {
         const oldProps = { ...target };
         target[prop as keyof Props] = value;
 
