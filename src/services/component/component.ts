@@ -51,7 +51,7 @@ export class Component {
     this.componentDidMount();
   }
 
-  protected componentDidMount(oldProps?: Props): void {}
+  protected componentDidMount(_oldProps?: Props): void {}
 
   public dispatchComponentDidMount(): void {
     this.eventBus().emit(Component.EVENTS.FLOW_CDM);
@@ -66,7 +66,7 @@ private _componentDidUpdate = (event: Event): void => {
     }
 };
 
-  protected componentDidUpdate(oldProps: Props, newProps: Props): boolean {
+  protected componentDidUpdate(_oldProps: Props, _newProps: Props): boolean {
     return true;
   }
 
@@ -99,7 +99,7 @@ private _componentDidUpdate = (event: Event): void => {
 
   private _makePropsProxy(props: Props): Props {
     return new Proxy(props, {
-      set: (target: Props, prop: string, value: any): boolean => {
+      set: (target: Props, prop: string, value: unknown): boolean => {
         const oldProps = { ...target };
         target[prop as keyof Props] = value;
 
