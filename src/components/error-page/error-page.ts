@@ -1,15 +1,12 @@
-import './error-page.scss';
 import { Component } from '../../services/component/component';
-
-interface IProps {
-    statusCode: string;
+interface IErrorPageProps {
+    statusCode: number;
     description: string;
     linkHref: string;
     linkText: string;
 }
-
 export class ErrorPage extends Component {
-  constructor(props: IProps) {
+  constructor(props: IErrorPageProps) {
     super("div", props);
   }
 

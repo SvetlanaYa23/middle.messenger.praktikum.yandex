@@ -1,13 +1,12 @@
 import { Component } from '../../services/component/component';
-import './link.scss';
 
-interface IProps {
+interface ILinkProps {
     linkHref: string;
     linkText: string;
 }
 
 export class Link extends Component {
-  constructor(props: IProps) {
+  constructor(props: ILinkProps) {
     super("a", props);
   }
 

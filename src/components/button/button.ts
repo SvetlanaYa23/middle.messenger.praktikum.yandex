@@ -1,12 +1,14 @@
 import { Component } from "../../services/component/component";
+import { IProps } from "../../types";
 import './button.scss';
 
-interface IProps {
+interface IButtonProps extends IProps  {
     value: string;
+    onClick?: () => void,
 }
 
 export class Button extends Component {
-  constructor(props: IProps) {
+  constructor(props: IButtonProps) {
     super("button", props);
   }
 

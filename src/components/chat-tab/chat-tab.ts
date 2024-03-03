@@ -1,14 +1,13 @@
 import { Component } from "../../services/component/component";
-import './chat-tab.scss';
 
-interface IProps {
+interface IChatTabProps {
   userName: string;
   messenge: string;
   time: string;
 }
 
 export class ChatTab extends Component {
-  constructor(props: IProps) {
+  constructor(props: IChatTabProps) {
     super("div", props);
   }
 

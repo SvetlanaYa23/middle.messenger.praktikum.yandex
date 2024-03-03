@@ -1,7 +1,6 @@
 import { Component } from '../../services/component/component';
-import './field-edit.scss';
 
-interface IProps {
+interface IFieldEditProps {
     name: string;
     value: string;
     type: string;
@@ -10,7 +9,7 @@ interface IProps {
 }
 
 export class FieldEdit extends Component {
-  constructor(props: IProps) {
+  constructor(props: IFieldEditProps) {
     super("div", props);
   }
 

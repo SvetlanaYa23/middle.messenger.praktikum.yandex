@@ -1,7 +1,6 @@
 import { Component } from '../../services/component/component';
-import './form-field.scss';
 
-interface IProps {
+interface IFormFieldProps {
     name: string;
     value: string;
     type: string;
@@ -10,7 +9,7 @@ interface IProps {
 }
 
 export class FormField extends Component {
-  constructor(props: IProps) {
+  constructor(props: IFormFieldProps) {
     super("div", props);
   }
 
