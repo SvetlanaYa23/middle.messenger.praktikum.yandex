@@ -10,7 +10,9 @@
     "no-descending-specificity": null,
     "shorthand-property-no-redundant-values": null,
     "color-function-notation": null,
-    "alpha-value-notation": null
+    "alpha-value-notation": null,
+    "selector-class-pattern": null,
+    "media-feature-range-notation": null
   },
   "ignoreFiles": [
     "dist/*"
