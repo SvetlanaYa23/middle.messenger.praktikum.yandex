@@ -1,12 +1,12 @@
 import { Component } from '../../services/component/component';
 import './avatar.scss';
 
-interface IProps {
+interface IAvatarProps {
     name: string;
 }
 
 export class Avatar extends Component {
-  constructor(props: IProps) {
+  constructor(props: IAvatarProps) {
     super("button", props);
   }
 
