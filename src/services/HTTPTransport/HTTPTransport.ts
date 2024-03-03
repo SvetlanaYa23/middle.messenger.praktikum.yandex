@@ -1,3 +1,5 @@
+type HTTPMethod = (url: string, options?: OptionsType) => Promise<unknown>
+
 function queryStringify(data: { [key: string]: unknown }) {
     if (typeof data !== 'object') {
         throw new Error('Data must be object');

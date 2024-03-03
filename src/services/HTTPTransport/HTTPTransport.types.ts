@@ -12,4 +12,3 @@ type OptionsType = {
     timeout?: number;
 };
 
-type HTTPMethod = (url: string, options?: OptionsType) => Promise<unknown>
