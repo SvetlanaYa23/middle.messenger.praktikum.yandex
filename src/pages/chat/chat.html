@@ -13,20 +13,9 @@
                     <a class="chats__profile-link" href="/profile" target="_blank">Profile</a>
                 </div>
                 <div class="chats__items">
-                    <div class="chats__item">
-                        <div class="chats__info_left">
-                            <div class="chats__user-image">
-                                <img src="../../../static/image.png" alt="user image">
-                            </div>
-                            <div class="chats__container">
-                                <div class="chats__user-name">Антон</div>
-                                <div class="chats__user-messenge">Привет!</div>
-                            </div>
-                        </div>
-                        <div class="chats__info_right">
-                            <div class="chats__time">10:20</div>
-                        </div>
-                    </div>
+                    {{>chat-tab/chat-tab userName="Антон" messenge="Привет!" time="10:20" }} 
+                    {{>chat-tab/chat-tab userName="Антон" messenge="Привет!" time="10:27" }} 
+                    {{>chat-tab/chat-tab userName="Антон" messenge="Привет!" time="10:29" }} 
                 </div>
             </div>
             <div class="chat__right-part">

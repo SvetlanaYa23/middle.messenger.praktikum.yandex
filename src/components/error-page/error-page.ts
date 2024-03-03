@@ -8,7 +8,7 @@ interface IProps {
     linkText: string;
 }
 
-export class ErrorPage404 extends Component {
+export class ErrorPage extends Component {
   constructor(props: IProps) {
     super("div", props);
   }
