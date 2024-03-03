@@ -1,5 +1,20 @@
 type HTTPMethod = (url: string, options?: OptionsType) => Promise<unknown>
 
+enum METHODS {
+    GET = 'GET',
+    PUT = 'PUT',
+    POST = 'POST',
+    DELETE = 'DELETE',
+}
+  
+type OptionsType = {
+    method?: METHODS.GET | METHODS.PUT | METHODS.POST | METHODS.DELETE;
+    headers?: { [key: string]: string };
+    data?: { [key: string]: unknown };
+    timeout?: number;
+};
+
+
 function queryStringify(data: { [key: string]: unknown }) {
     if (typeof data !== 'object') {
         throw new Error('Data must be object');

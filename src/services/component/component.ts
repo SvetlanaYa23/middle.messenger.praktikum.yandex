@@ -1,5 +1,6 @@
 import { EventBus } from '../eventBus/eventBus';
-import './component.types.ts';
+
+type Props = Record<string, string>;
 
 export class Component {
   private static EVENTS = {
