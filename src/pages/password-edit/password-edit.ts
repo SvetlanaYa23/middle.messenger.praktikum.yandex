@@ -11,13 +11,25 @@ const passwordEditLayout = new PasswordEditLayout('div', {
     avatar: new Avatar('div', { name: "avatar" }),
     fields: [,
         new FieldEdit('div', { 
-            type:"password", name:"oldPassword", id:"old-password", value :"Старый пароль", inputValue:"***********" 
+            type:"password", 
+            name:"oldPassword", 
+            id:"old-password", 
+            value :"Старый пароль", 
+            inputValue:"***********" 
         }),
         new FieldEdit('div', { 
-            type:"password", name:"newPassword", id:"new-password", value :"Новый пароль", inputValue:"***********" 
+            type:"password", 
+            name:"newPassword", 
+            id:"new-password", 
+            value :"Новый пароль", 
+            inputValue:"***********" 
         }),
         new FieldEdit('div', { 
-            type:"password", name:"newPassword", id:"new-password-again", value :"Повторите новый пароль", inputValue:"***********" 
+            type:"password", 
+            name:"newPassword", 
+            id:"new-password-again", 
+            value :"Повторите новый пароль",
+            inputValue:"***********" 
         }),
     ],
     button: new Button('div', { value: "Сохранить"}),

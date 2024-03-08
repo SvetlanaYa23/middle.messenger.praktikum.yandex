@@ -91,7 +91,7 @@ export default class Component {
   }
 
   // Может переопределять пользователь, необязательно трогать
-  componentDidMount() {}
+  componentDidMount() { }
 
   dispatchComponentDidMount() {
     this.eventBus().emit(Component.EVENTS.FLOW_CDM);
@@ -156,7 +156,7 @@ export default class Component {
   }
 
   // Может переопределять пользователь, необязательно трогать
-  render() {}
+  render() { }
 
   addEvents() {
     const { events = {} } = this._props;
