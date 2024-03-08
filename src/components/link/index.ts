@@ -1,3 +1,9 @@
+import Component  from "../../services/component/component";
+import tpl from "./link.ts";
 import './link.scss';
 
-export { Link} from './link';
+export class Link extends Component {
+    render() {
+        return this.compile(tpl);
+      }
+}

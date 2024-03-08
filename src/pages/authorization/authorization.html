@@ -6,23 +6,7 @@
     <title>Authorization</title>
 </head>
 <body>
-    <main class="authorization-form">
-      <div class="authorization-form__container">
-        <form class="authorization-form__form" action="" method="post">
-            <h2 class="authorization-form__title">Вход</h2>
-            <div class="authorization-form__inputs">
-                {{>form-field/form-field name="login" value="Логин" id="authorization-login" type="text" placeholder="ivanivanov"}}
-                {{>form-field/form-field name="password" value="Пароль" id="authorization-password" type="password" placeholder="**********"}}
-            </div>
-            <div class="authorization-form__button">
-              {{>button/button value="Авторизоваться"}}
-            </div>
-            <div class="authorization-form__link">
-              {{>link/link linkHref="/" linkText="Нет аккаунта?"}}
-            </div>
-        </form>
-      </div>
-    </main>
+    <div id="app"></div>
     <script type="module" src="./authorization.ts"></script>
 </body>
 </html>

@@ -1,11 +1,12 @@
-import { Component } from '../../services/component/component';
+import { ErrorPage } from "../../components/error-page";
+import { renderDOM } from "../../services/renderDOM/renderDOM";
 import '../../style.scss';
 
-export class Page404 extends Component {
+const errorPage404  = new ErrorPage ('div', {
+    statusCode: "404",
+    description: "Не туда попали",
+    linkHref: "/",
+    linkText: "Назад к чатам" 
+    });
 
-     render(): string {
-        return `<div class="error-page-404">
-                    {{{>error-page/error-page statusCode="404" description="Не туда попали" linkHref="/" linkText="Назад к чатам" }}}
-                </div>`;
-      }
-}
+renderDOM('#app', errorPage404);
