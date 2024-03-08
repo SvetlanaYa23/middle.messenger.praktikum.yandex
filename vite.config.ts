@@ -7,6 +7,7 @@ export default defineConfig({
     build: {
         outDir: resolve(__dirname, 'dist'),
         rollupOptions: {
+            external: ['uuid'],
             input: {
                 index: '/index.html',
                 authorization: '/pages/authorization/authorization.html',
