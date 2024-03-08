@@ -27,4 +27,3 @@ const content = new Content('main', {
 });
 
 renderDOM('#app', content);
-

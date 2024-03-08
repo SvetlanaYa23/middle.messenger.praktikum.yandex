@@ -1,3 +1,3 @@
 export interface IProps {
-    [index: string | symbol]: unknown
-  }
+  [index: string | symbol]: unknown
+}

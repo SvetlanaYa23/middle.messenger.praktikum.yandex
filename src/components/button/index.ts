@@ -7,5 +7,3 @@ export class Button extends Component {
         return this.compile(tpl);
       }
 }
-
-
