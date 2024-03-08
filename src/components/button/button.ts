@@ -1,5 +1,5 @@
 const tpl = `
-  <button class="button">{{ value }}</button>
+  <button class="button" type="submit">{{ value }}</button>
 `;
 
 export default tpl;

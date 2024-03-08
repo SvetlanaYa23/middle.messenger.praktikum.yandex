@@ -1,4 +1,4 @@
-import { PasswordEditLayout } from '../../block/password-edit-layout';
+import { PasswordEditLayout } from '../../modules/password-edit-layout';
 import { Avatar } from '../../components/avatar';
 import { Button } from '../../components/button';
 import { Content } from '../../components/content';

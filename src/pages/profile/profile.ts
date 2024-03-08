@@ -1,4 +1,4 @@
-import { ProfileLayout } from '../../block/profile-layout';
+import { ProfileLayout } from '../../modules/profile-layout';
 import { Avatar } from '../../components/avatar';
 import { Content } from '../../components/content';
 import { Link } from '../../components/link';

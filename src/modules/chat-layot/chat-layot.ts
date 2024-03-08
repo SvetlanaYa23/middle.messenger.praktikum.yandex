@@ -16,10 +16,10 @@ const tpl =
                 </div>
                 <div class="message__user-name">Антон</div>
             </div>
-            <div class="message__send">
+            <form id="message" class="message__send">
                 <input class="message__input" type="text" name="message" id="message" placeholder="Сообщение">
-                <button class="message__send-button"></button>
-            </div>
+                <button type="submit" class="message__send-button"></button>
+            </form>
         </div>
     </div>
 </main>`;

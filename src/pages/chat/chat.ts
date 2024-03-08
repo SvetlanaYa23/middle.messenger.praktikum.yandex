@@ -1,4 +1,4 @@
-import { ChatLayout } from '../../block/chat-layot';
+import { ChatLayout } from '../../modules/chat-layot';
 import { ChatTab } from '../../components/chat-tab';
 import { Content } from '../../components/content';
 import { renderDOM } from '../../services/renderDOM/renderDOM';

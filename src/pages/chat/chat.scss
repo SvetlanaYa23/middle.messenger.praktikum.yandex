@@ -85,6 +85,10 @@
         color: $grey;
         background-color: $backgroundGrey;
         outline: none;
+
+        &.error {
+            border: 1px solid $red;
+        }
     }
 
     &__send-button {

@@ -3,7 +3,7 @@ const tpl = `<main class="password-edit">
                     <div class="password-edit__user">
                         {{{ avatar }}}
                     </div>
-                    <form class="password-edit__form" action="" method="post">
+                    <form id="password-edit" class="password-edit__form" action="" method="post">
                         <div class="password-edit__info">
                             {{{ fields }}}
                         <div class="password-edit__button">

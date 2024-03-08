@@ -1,4 +1,4 @@
-import { RegistrationLayout } from '../../block/registration-layout';
+import { RegistrationLayout } from '../../modules/registration-layout';
 import { Button } from '../../components/button';
 import { Content } from '../../components/content';
 import { FormField } from '../../components/form-field';

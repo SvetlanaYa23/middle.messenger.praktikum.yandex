@@ -1,4 +1,4 @@
-import { ProfileEditLayout } from '../../block/profile-edit-layout';
+import { ProfileEditLayout } from '../../modules/profile-edit-layout';
 import { Avatar } from '../../components/avatar';
 import { Button } from '../../components/button';
 import { Content } from '../../components/content';
