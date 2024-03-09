@@ -30,6 +30,7 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
-    "normalize-scss": "^8.0.0"
+    "normalize-scss": "^8.0.0",
+    "uuid": "^9.0.1"
   }
 }
