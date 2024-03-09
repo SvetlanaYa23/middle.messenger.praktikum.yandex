@@ -10,10 +10,9 @@ export class PasswordEditLayout extends Component {
 
       if (form) {
         form.addEventListener('submit', handleSubmit);
-        console.log(form, 'form');
+        
         form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
           input.addEventListener('blur', handleBlur);
-          console.log(input, 'input');
         });
       }
     });
