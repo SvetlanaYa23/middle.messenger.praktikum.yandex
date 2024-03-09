@@ -2,9 +2,9 @@
 
 .chat {
     &__container {
-       display: flex;
-       width: 100vw;
-       height: 100vh;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
     }
 
     &__left-part {
@@ -50,11 +50,13 @@
     }
 
     &__user-image {
-        width: 34px;
-        height: 34px;
-        margin-right: 10px;
-        border-radius: 50%;
-        background-color: $backgroundGrey;
+        img {
+            width: 34px;
+            height: 34px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: $backgroundGrey;
+        }
     }
 
     &__user-name {

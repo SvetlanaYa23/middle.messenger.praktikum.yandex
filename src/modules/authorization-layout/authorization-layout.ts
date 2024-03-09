@@ -1,8 +1,8 @@
 const tpl = `<main class="authorization-form">
                 <div class="authorization-form__container">
-                    <form id="authorization" class="authorization-form__form" action="" method="post">
+                    <form id="authorization-form" class="authorization-form__form" action="" method="post">
                         <h2 class="authorization-form__title">Вход</h2>
-                        <div id="authorization__input" class="authorization-form__inputs">
+                        <div class="authorization-form__inputs">
                             {{{ fields }}}
                         </div>
                         <div class="authorization-form__button">

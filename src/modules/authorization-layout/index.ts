@@ -6,11 +6,10 @@ export class AuthorizationLayout extends Component {
   addEvents() {
     super.addEvents();
     document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('authorization');
+      const form = document.getElementById('authorization-form');
 
       if (form) {
         form.addEventListener('submit', handleSubmit);
-      
         form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
           input.addEventListener('blur', handleBlur);
         });
@@ -22,7 +21,8 @@ export class AuthorizationLayout extends Component {
     super.removeEvents();
 
     document.removeEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('authorization');
+      const form = document.getElementById('authorization-form');
+      
       if (form) {
         form.removeEventListener('submit', handleSubmit);
         form.querySelectorAll('input').forEach((input: HTMLInputElement) => {

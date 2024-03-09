@@ -2,7 +2,7 @@ const tpl = `
   <div class="chats__item">
   <div class="chats__info_left">
       <div class="chats__user-image">
-          <img src="../../../static/image.png" alt="user image">
+          <img src="../../../../image.png" alt="user image">
       </div>
       <div class="chats__container">
           <div class="chats__user-name">{{ userName }}</div>

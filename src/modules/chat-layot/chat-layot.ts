@@ -12,7 +12,7 @@ const tpl =
         <div class="chat__right-part">
             <div class="message__profile-info">
                 <div class="message__user-image">
-                    <img src="../../../static/image.png" alt="user image">
+                    <img src="../../../../image.png" alt="user image">
                 </div>
                 <div class="message__user-name">Антон</div>
             </div>

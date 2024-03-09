@@ -23,6 +23,7 @@ export class ProfileEditLayout extends Component {
 
     document.removeEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('profile-edit');
+      
       if (form) {
         form.removeEventListener('submit', handleSubmit);
         form.querySelectorAll('input').forEach((input: HTMLInputElement) => {

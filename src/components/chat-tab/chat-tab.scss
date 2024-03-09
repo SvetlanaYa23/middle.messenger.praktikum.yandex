@@ -13,11 +13,13 @@
     }
 
     &__user-image {
-        width: 47px;
-        height: 47px;
-        margin-right: 10px;
-        border-radius: 50%;
-        background-color: $backgroundGrey;
+        img {
+            width: 47px;
+            height: 47px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: $backgroundGrey;
+        }
     }
 
     &__user-name {
