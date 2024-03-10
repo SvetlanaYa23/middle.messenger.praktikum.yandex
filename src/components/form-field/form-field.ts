@@ -1,1 +1,8 @@
-import './form-field.scss';
+const tpl = `
+<div class="form-field__input">
+    <label for="{{ name }}">{{ value }}</label>
+    <input type="{{ type }}" name="{{ name }}" id="{{ id }}" placeholder="{{ placeholder }}">
+</div>
+`;
+
+export default tpl;

@@ -1,6 +1,6 @@
 ### Project: 
 
-Messenger - проектная работа для 1 спринта
+Messenger - проектная работа для 2 спринта. Используется TypeScript и ESLint, Stylelint для проверки и форматирования кода.
 
 ### Design:
 
@@ -11,6 +11,7 @@ Messenger - проектная работа для 1 спринта
 - `npm run dev` — start development,
 - `npm run build`,
 - `npm run start` — run build and start server,
+- `npm run lint` - run eslint,
 
 ### Netlify
     index: https://deploy--zesty-heliotrope-fcb30b.netlify.app/
