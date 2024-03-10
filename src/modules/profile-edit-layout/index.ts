@@ -3,16 +3,6 @@ import { handleBlur, handleSubmit } from '../../services/validation/validation';
 import tpl from './profile-edit-layout';
 
 export class ProfileEditLayout extends Component {
-  addEvents() {
-    super.addEvents();
-    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
-  }
-
-  removeEvents() {
-    super.removeEvents();
-    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
-  }
-
   onDOMContentLoaded() {
     const form = document.getElementById('profile-edit');
 
@@ -22,6 +12,16 @@ export class ProfileEditLayout extends Component {
         input.addEventListener('blur', handleBlur);
       });
     }
+  }
+
+  addEvents() {
+    super.addEvents();
+    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
+  }
+
+  removeEvents() {
+    super.removeEvents();
+    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
   }
   
   render() {

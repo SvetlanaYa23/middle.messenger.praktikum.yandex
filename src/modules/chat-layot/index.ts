@@ -3,16 +3,6 @@ import { handleBlur, handleSubmit } from '../../services/validation/validation';
 import tpl from './chat-layot';
 
 export class ChatLayout extends Component {
-  addEvents() {
-    super.addEvents();
-    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
-  }
-
-  removeEvents() {
-    super.removeEvents();
-    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
-  }
-
   onDOMContentLoaded() {
     const form = document.getElementById('message');
 
@@ -22,6 +12,16 @@ export class ChatLayout extends Component {
         input.addEventListener('blur', handleBlur);
       });
     }
+  }
+  
+  addEvents() {
+    super.addEvents();
+    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
+  }
+
+  removeEvents() {
+    super.removeEvents();
+    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
   }
   
   render() {

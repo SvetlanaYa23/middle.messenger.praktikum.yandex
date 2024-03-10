@@ -34,7 +34,7 @@ function getPatternByName(name: string): PatternObject | null {
   switch (name) {
     case 'name':
       errorText =
-        'Введите верное имя (латиница или кириллица, первая буква заглавная, без пробелов и без цифр, нет спецсимволов)';
+        'Введите верное имя (латиница или кириллица, первая буква заглавная, без пробелов и цифр, нет спецсимволов)';
       return { pattern: namePattern, errorText };
     case 'login':
       errorText =
@@ -42,7 +42,7 @@ function getPatternByName(name: string): PatternObject | null {
       return { pattern: loginPattern, errorText };
     case 'email':
       errorText =
-        'Введите верный email (латиница, может включать цифры и спецсимволы, должна быть «собака» (@) и точка после неё)';
+        'Введите верный email (латиница, может включать цифры и спецсимволы, должна быть «@» и точка после неё)';
       return { pattern: emailPattern, errorText };
     case 'password':
       errorText =
