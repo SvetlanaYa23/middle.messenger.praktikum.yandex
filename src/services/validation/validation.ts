@@ -1,11 +1,9 @@
-import {
-  messagePattern,
-  namePattern,
-  passwordPattern,
-  phonePattern,
-  loginPattern,
-  emailPattern,
-} from './regex_patterns';
+import { emailPattern, loginPattern, messagePattern, namePattern, passwordPattern, phonePattern } from './regex_patterns';
+
+type PatternObject = {
+  pattern: RegExp;
+  errorText: string;
+};
 
 export function validateField(input: HTMLInputElement, pattern: RegExp): boolean {
   return pattern.test(input.value);
@@ -23,20 +21,27 @@ export function collectFormData(form: HTMLFormElement): { [key: string]: string 
   return formProps;
 }
 
-function getPatternByName(name: string): RegExp | null {
+function getPatternByName(name: string): PatternObject | null {
+  let errorText = '';
+
   switch (name) {
     case 'name':
-      return namePattern;
+      errorText = 'Введите верное имя (латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр, нет спецсимволов)';
+      return { pattern: namePattern, errorText };
     case 'login':
-      return loginPattern;
+      errorText = 'Введите верный логин (от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов)';
+      return { pattern: loginPattern, errorText };
     case 'email':
-      return emailPattern;
+      errorText = 'Введите верный email (латиница, может включать цифры и спецсимволы вроде дефиса и подчёркивания, обязательно должна быть «собака» (@) и точка после неё)';
+      return { pattern: emailPattern, errorText };
     case 'password':
-      return passwordPattern;
+      errorText = 'Введите верный пароль (от 8 до 40 символов, обязательно хотя бы одна заглавная буква и цифра)';
+      return { pattern: passwordPattern, errorText };
     case 'phone':
-      return phonePattern;
+      errorText = 'Введите верный телефон (от 10 до 15 символов, состоит из цифр, может начинается с плюса)';
+      return { pattern: phonePattern, errorText };
     case 'message':
-      return messagePattern;
+      return { pattern: messagePattern, errorText: 'Сообщение не должно быть пустым' };
     default:
       return null;
   }
@@ -44,12 +49,30 @@ function getPatternByName(name: string): RegExp | null {
 
 export function handleBlur(event: FocusEvent): void {
   const input = event.target as HTMLInputElement;
-  const pattern = getPatternByName(input.name);
+  const currentPattern = getPatternByName(input.name);
 
-  if (pattern && !validateField(input, pattern)) {
-    input.classList.add('error');
-  } else {
-    input.classList.remove('error');
+  if (currentPattern) {
+    const { pattern, errorText } = currentPattern;
+    const errorSpan = document.createElement('span');
+    errorSpan.classList.add('error-text');
+    errorSpan.textContent = errorText;
+
+    const parentElement = input.parentElement;
+    if (parentElement) {
+      const existingErrorSpan = parentElement.querySelector('.error-text');
+
+      if (!validateField(input, pattern)) {
+        input.classList.add('error');
+        if (!existingErrorSpan) {
+          parentElement.appendChild(errorSpan);
+        }
+      } else {
+        input.classList.remove('error');
+        if (existingErrorSpan) {
+          parentElement.removeChild(existingErrorSpan);
+        }
+      }
+    }
   }
 }
 
@@ -61,14 +84,31 @@ export function handleSubmit(event: Event): void {
   let isValid = true;
 
   form.querySelectorAll('input').forEach(input => {
-    const pattern = getPatternByName(input.name);
+    const currentPattern = getPatternByName(input.name);
 
-    if (pattern && !validateField(input, pattern)) {
-      isValid = false;
+    if (currentPattern) {
+      const { pattern, errorText } = currentPattern;
+      const errorSpan = document.createElement('span');
+      errorSpan.classList.add('error-text');
+      errorSpan.textContent = errorText;
 
-      input.classList.add('error');
-    } else {
-      input.classList.remove('error');
+      const parentElement = input.parentElement;
+      if (parentElement) {
+        const existingErrorSpan = parentElement.querySelector('.error-text');
+
+        if (!validateField(input, pattern)) {
+          isValid = false;
+          input.classList.add('error');
+          if (!existingErrorSpan) {
+            parentElement.appendChild(errorSpan);
+          }
+        } else {
+          input.classList.remove('error');
+          if (existingErrorSpan) {
+            parentElement.removeChild(existingErrorSpan);
+          }
+        }
+      }
     }
   });
 

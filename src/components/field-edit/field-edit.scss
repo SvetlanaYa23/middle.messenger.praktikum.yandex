@@ -2,6 +2,7 @@
 
 .field-edit{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   border-bottom: 1px solid $lightGrey;
   padding: 8px 0;

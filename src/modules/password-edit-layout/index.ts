@@ -5,31 +5,23 @@ import tpl from './password-edit-layout';
 export class PasswordEditLayout extends Component {
   addEvents() {
     super.addEvents();
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('password-edit');
-
-      if (form) {
-        form.addEventListener('submit', handleSubmit);
-        
-        form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
-          input.addEventListener('blur', handleBlur);
-        });
-      }
-    });
+    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
   }
 
   removeEvents() {
     super.removeEvents();
+    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
+  }
 
-    document.removeEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('password-edit');
-      if (form) {
-        form.removeEventListener('submit', handleSubmit);
-        form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
-          input.removeEventListener('blur', handleBlur);
-        });
-      }
-    });
+  onDOMContentLoaded() {
+    const form = document.getElementById('password-edit');
+
+    if (form) {
+      form.addEventListener('submit', handleSubmit);
+      form.querySelectorAll('input').forEach((input) => {
+        input.addEventListener('blur', handleBlur);
+      });
+    }
   }
 
   render() {

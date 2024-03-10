@@ -5,31 +5,23 @@ import tpl from './registration-layout';
 export class RegistrationLayout extends Component {
   addEvents() {
     super.addEvents();
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('registration-form');
-
-      if (form) {
-        form.addEventListener('submit', handleSubmit);
-
-        form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
-          input.addEventListener('blur', handleBlur);
-        });
-      }
-    });
+    document.addEventListener('DOMContentLoaded', this.onDOMContentLoaded);
   }
 
   removeEvents() {
     super.removeEvents();
+    document.removeEventListener('DOMContentLoaded', this.onDOMContentLoaded);
+  }
 
-    document.removeEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('registration-form');
-      if (form) {
-        form.removeEventListener('submit', handleSubmit);
-        form.querySelectorAll('input').forEach((input: HTMLInputElement) => {
-          input.removeEventListener('blur', handleBlur);
-        });
-      }
-    });
+  onDOMContentLoaded() {
+    const form = document.getElementById('registration-form');
+
+    if (form) {
+      form.addEventListener('submit', handleSubmit);
+      form.querySelectorAll('input').forEach((input) => {
+        input.addEventListener('blur', handleBlur);
+      });
+    }
   }
   
   render() {
