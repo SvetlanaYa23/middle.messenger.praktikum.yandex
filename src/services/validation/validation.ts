@@ -32,7 +32,7 @@ function getPatternByName(name: string): PatternObject | null {
   let errorText = '';
 
   switch (name) {
-    // eslint-disable-line
+    // eslint-disable-line max-len
     case 'name':
       errorText = 'Введите верное имя (латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр, нет спецсимволов)';
       return { pattern: namePattern, errorText };
