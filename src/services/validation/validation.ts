@@ -32,20 +32,24 @@ function getPatternByName(name: string): PatternObject | null {
   let errorText = '';
 
   switch (name) {
-    // eslint-disable-line max-len
     case 'name':
+      // eslint-disable-line max-len
       errorText = 'Введите верное имя (латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр, нет спецсимволов)';
       return { pattern: namePattern, errorText };
     case 'login':
+      // eslint-disable-line max-len
       errorText = 'Введите верный логин (от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов)';
       return { pattern: loginPattern, errorText };
     case 'email':
+      // eslint-disable-line max-len
       errorText = 'Введите верный email (латиница, может включать цифры и спецсимволы вроде дефиса и подчёркивания, обязательно должна быть «собака» (@) и точка после неё)';
       return { pattern: emailPattern, errorText };
     case 'password':
+      // eslint-disable-line max-len
       errorText = 'Введите верный пароль (от 8 до 40 символов, обязательно хотя бы одна заглавная буква и цифра)';
       return { pattern: passwordPattern, errorText };
     case 'phone':
+      // eslint-disable-line max-len
       errorText = 'Введите верный телефон (от 10 до 15 символов, состоит из цифр, может начинается с плюса)';
       return { pattern: phonePattern, errorText };
     case 'message':
