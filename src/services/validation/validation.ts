@@ -1,4 +1,11 @@
-import { emailPattern, loginPattern, messagePattern, namePattern, passwordPattern, phonePattern } from './regex_patterns';
+import {
+  emailPattern,
+  loginPattern,
+  messagePattern,
+  namePattern,
+  passwordPattern,
+  phonePattern
+} from './regex_patterns';
 
 type PatternObject = {
   pattern: RegExp;
@@ -25,6 +32,7 @@ function getPatternByName(name: string): PatternObject | null {
   let errorText = '';
 
   switch (name) {
+    // eslint-disable-line
     case 'name':
       errorText = 'Введите верное имя (латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр, нет спецсимволов)';
       return { pattern: namePattern, errorText };
